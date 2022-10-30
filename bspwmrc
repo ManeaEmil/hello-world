@@ -1,0 +1,26 @@
+#! /bin/sh
+
+sxhkd -c ~/.config/sxhkd/sxhkdrc &
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
+
+bspc config border_width        3
+bspc config window_gap          15
+bspc config bottom_padding	21	
+l
+bspc config pointer_follows_focus true
+bspc config focus_follows_pointer true
+bspc config focused_border_color	"#1c1c1c"        
+bspc config normal_border_color		"#1c1c1c"
+bspc config active_border_color         "#1c1c1c"
+bspc config presel_feedback_color       "#1c1c1c"
+
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+sh ~/.config/polybar/launch.sh &
+feh --bg-fill ~/Pictures/wallpaper/* &
+picom &
+steam -silent &
+sh /opt/"Mullvad VPN"/mullvad-vpn &
